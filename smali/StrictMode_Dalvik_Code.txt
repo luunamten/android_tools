@@ -1,0 +1,24 @@
+   .line 18
+    new-instance p1, Landroid/os/StrictMode$ThreadPolicy$Builder;
+
+    invoke-direct {p1}, Landroid/os/StrictMode$ThreadPolicy$Builder;-><init>()V
+
+    .line 19
+    invoke-virtual {p1}, Landroid/os/StrictMode$ThreadPolicy$Builder;->detectDiskReads()Landroid/os/StrictMode$ThreadPolicy$Builder;
+
+    .line 20
+    invoke-virtual {p1}, Landroid/os/StrictMode$ThreadPolicy$Builder;->detectDiskWrites()Landroid/os/StrictMode$ThreadPolicy$Builder;
+
+    .line 21
+    invoke-virtual {p1}, Landroid/os/StrictMode$ThreadPolicy$Builder;->detectNetwork()Landroid/os/StrictMode$ThreadPolicy$Builder;
+
+    .line 22
+    invoke-virtual {p1}, Landroid/os/StrictMode$ThreadPolicy$Builder;->penaltyFlashScreen()Landroid/os/StrictMode$ThreadPolicy$Builder;
+
+    .line 23
+    invoke-virtual {p1}, Landroid/os/StrictMode$ThreadPolicy$Builder;->build()Landroid/os/StrictMode$ThreadPolicy;
+
+    move-result-object p1
+
+    .line 17
+    invoke-static {p1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V

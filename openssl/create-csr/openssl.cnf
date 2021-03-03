@@ -1,0 +1,44 @@
+####################################################################
+[ req ]
+default_bits       = 2048
+default_keyfile    = key.pem
+distinguished_name = server_distinguished_name
+req_extensions     = server_req_extensions
+string_mask        = utf8only
+
+####################################################################
+[ server_distinguished_name ]
+countryName         = VI
+countryName_default = VI
+
+stateOrProvinceName         = HCM
+stateOrProvinceName_default = HCM
+
+localityName         = HCM city
+localityName_default = HCM city
+
+organizationName            = Lotus
+organizationName_default    = Lotus
+
+organizationalUnitName         = Lotus.IT
+organizationalUnitName_default = Lotus.IT
+
+commonName           = saiwks1812.sai.gameloft.org
+commonName_default   = saiwks1812.sai.gameloft.org
+
+emailAddress         = luunamtens@gmail.com
+emailAddress_default = luunamtens@gmail.com
+
+####################################################################
+[ server_req_extensions ]
+
+subjectKeyIdentifier = hash
+basicConstraints     = CA:FALSE
+keyUsage             = digitalSignature, keyEncipherment
+subjectAltName       = @alternate_names
+nsComment            = "OpenSSL Generated Certificate"
+
+####################################################################
+[ alternate_names ]
+
+DNS.1 = saiwks1812.sai.gameloft.org

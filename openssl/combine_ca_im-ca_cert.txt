@@ -1,0 +1,29 @@
+-----BEGIN RSA PRIVATE KEY-----
+(Your Private Key: your_domain_name.key)
+-----END RSA PRIVATE KEY-----
+-----BEGIN CERTIFICATE-----
+(Your Primary SSL certificate: your_domain_name.crt)
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+(Your Intermediate certificate: IntermediaryCA.crt)
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+(Your Root certificate: TrustedRoot.crt)
+-----END CERTIFICATE-----
+
+
+=========================================================
+More interesting question:
+@ How to combine all CA certs into one file?
+>> Just append them together into one pem file.
+
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----
+...
+
+@ Explaination about various x509 certificate extensions:
+https://serverfault.com/questions/9708/what-is-a-pem-file-and-how-does-it-differ-from-other-openssl-generated-key-file

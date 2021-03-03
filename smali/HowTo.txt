@@ -1,0 +1,13 @@
+1. Decompose APK: java -jar apktool.jar d app.apk
+2. Edit smali files, Manifest, etc
+3. Pack APK: java -jar apktool.jar b app -o new.apk
+4. zipalign, apksigner is from Android SDK/build-tools
+4.1 zipalign -v 4 new.apk new_4.apk //align 4 bytes
+4.2 apksigner sign --ks my-key.jks new_4.apk //sign apk
+
+---------------------------------------------
+# Decompse dex file into smali files: 
+>> java -jar baksmalli.jar disassemble classes.dex -o output
+
+#Pack smali files into dex file: 
+>> java -jar smalli.jar assemble output -o nam.dex
